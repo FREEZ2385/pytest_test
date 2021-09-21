@@ -7,6 +7,6 @@ def function_three_add(num):
 def test_case_second():
     number_data = 1
 
-    expect = 5
+    expect = 4
     result = function_three_add(number_data)
     assert expect == result
