@@ -22,9 +22,15 @@ jobs:
 
     # 러너 이벤트
     steps:
+      - uses: actions/checkout@v2
+ 
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
       - name: Install pytest
         run: |
           python -m pip install --upgrade pip
           pip install pytest  
       - name: Start Python test by pytest
-        run: pytest
+        run: pytest test.py
